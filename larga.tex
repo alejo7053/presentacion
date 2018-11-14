@@ -1,0 +1,86 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{default}
+%\usetheme{Pittsburgh}
+%\usecolortheme{dove}
+%\useoutertheme{sidebar}
+%\useinnertheme{rectangles}
+
+\makeatletter
+\setbeamertemplate{frametitle}
+{
+	\ifbeamercolorempty[bg]{frametitle}{}{\nointerlineskip}%
+	\@tempdima=\textwidth%
+	\advance\@tempdima by\beamer@leftmargin%
+	\advance\@tempdima by\beamer@rightmargin%
+	\pgfsetfillopacity{.7}       %<------ fix filling opacity
+	\begin{beamercolorbox}[sep=0.3cm,left,wd=\the\@tempdima]{frametitle}
+		\usebeamerfont{frametitle}%
+		\vbox{}\vskip-1ex%
+		\if@tempswa\else\csname beamer@fteleft\endcsname\fi%
+		\strut\pgfsetfillopacity{1}\insertframetitle\strut\par%  <---- text opacity
+		{%
+			\ifx\insertframesubtitle\@empty%
+			\else%
+			{\usebeamerfont{framesubtitle}\usebeamercolor[fg]{framesubtitle}\insertframesubtitle\strut\par}%
+			\fi
+		}%
+		\vskip-1ex%
+		\if@tempswa\else\vskip-.3cm\fi% set inside beamercolorbox... evil here...
+	\end{beamercolorbox}%
+}
+\makeatother
+
+\title[Tarjeta Smart House para una Habitación]{Tarjeta Smart House para una Habitación}
+\subtitle{Sustentación}
+\author[John Barahona, César Tejada]{John Alejandro Barahona \and César Andres Tejada Torres}
+\institute[UQ]{
+	Universidad del Quindío\\
+	Armenia, Quindío
+}
+\date{\today}
+
+
+\begin{document}
+	
+	\setbeamertemplate{background canvas}{\includegraphics[width=\paperwidth,height=\paperheight]{Imagenes/portada.jpg}}
+	\frame{\titlepage}
+	
+	\setbeamertemplate{background canvas}{\includegraphics[width=\paperwidth,height=\paperheight]{Imagenes/fondo2.jpg}}
+	
+	\begin{frame}
+		\frametitle{Contenido}
+		\tableofcontents
+	\end{frame}
+	
+	
+ 	\begin{frame}
+	 	\input{Introduccion}
+	 	hola
+ 	\end{frame}
+ 
+ 	\begin{frame}
+		\input{Objetivos}
+ 	\end{frame}
+ 	
+	 	\input{MarcoTeorico}
+
+	\input{Resultados_Analisis}
+
+	\begin{frame}
+		\input{Conclusiones}
+	\end{frame}
+
+	\begin{frame}
+		\input{Trabajos_Futuros}
+	\end{frame}
+ 
+ %End Frame
+ \setbeamertemplate{background canvas}{\includegraphics[width=\paperwidth,height=\paperheight]{Imagenes/final.jpg}}
+ \begin{frame}
+ 	
+ \end{frame}
+
+
+\end{document}
