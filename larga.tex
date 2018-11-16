@@ -3,10 +3,18 @@
 \usepackage[spanish]{babel}
 \usepackage{default}
 \usepackage{multicol}
-%\usetheme{Pittsburgh}
-%\usecolortheme{dove}
+
+\setbeamercovered{transparent}
+
+%\textheight=31cm
+%\textwidth=10cm
+%\topmargin=-1cm
+%\oddsidemargin=0cm
+%\parindent=10mm
+\usetheme{Pittsburgh}
+\usecolortheme{dolphin}
 %\useoutertheme{sidebar}
-%\useinnertheme{rectangles}
+\useinnertheme{rectangles}
 
 \makeatletter
 \setbeamertemplate{frametitle}
@@ -35,17 +43,17 @@
 
 \title[Tarjeta Smart House para una Habitación]{Tarjeta Smart House para una Habitación}
 \subtitle{Sustentación}
-\author[John Barahona, César Tejada]{John Alejandro Barahona \and César Andres Tejada Torres}
+\author[John Barahona, César Tejada]{John Alejandro Barahona Pineda \and César Andres Tejada Torres}
 \institute[UQ]{
 	Universidad del Quindío\\
 	Armenia, Quindío
 }
 \date{\today}
 
+\setbeamertemplate{background canvas}{\includegraphics[width=\paperwidth,height=\paperheight]{Imagenes/portada.jpg}}
 
 \begin{document}
 	
-	\setbeamertemplate{background canvas}{\includegraphics[width=\paperwidth,height=\paperheight]{Imagenes/portada.jpg}}
 	\frame{\titlepage}
 	
 	\setbeamertemplate{background canvas}{\includegraphics[width=\paperwidth,height=\paperheight]{Imagenes/fondo2.jpg}}
@@ -57,7 +65,13 @@
 		\end{multicols} 
 	\end{frame}
 	
-	
+\begin{frame}
+	\begin{block}{Titulo}
+		Contenido
+	\end{block}
+\end{frame}
+
+
 % 	\begin{frame}
 	 	\input{Introduccion}
 %	\end{frame}
