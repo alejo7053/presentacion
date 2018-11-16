@@ -1,4 +1,5 @@
 \section{Resultados y Análisis}
+\begin{frame}
 \frametitle{Resultados y Análisis}
 
 En este capítulo se describen ciertos pasos y funcionamientos de la solución en general, para esto se supone una habitación con un sensor de temperatura, un ventilador y un bombillo led, las cuales el usuario va a visualizar y gestionar desde la aplicación web. En la figura \ref{fig:iot} está el esquema del sistema IoT.
@@ -9,8 +10,11 @@ En este capítulo se describen ciertos pasos y funcionamientos de la solución e
 %	\label{fig:iot}
 %	\includegraphics[width=0.6\linewidth]{Imagenes/IOT}
 %\end{figure}
+\end{frame}
 
-\section{Software}
+\begin{frame}
+
+\subsection{Software}
 
 Se desarrolla la aplicación web de manera local y posteriormente se lanza a un servidor en Internet. Se encuentra compuesta por los siguientes sitios y las diferentes interacciones basadas en las funciones básicas crear, leer, actualizar y borrar (CRUD).
 
@@ -30,8 +34,10 @@ Se desarrolla la aplicación web de manera local y posteriormente se lanza a un 
 \end{itemize}
 
 De acuerdo con la lista anterior, se toman en cuenta dos partes, una pública y una privada, como se observa en la figura \ref{fig:index}. En la parte pública se encuentra una vista con la información de contacto del fabricante, solicitudes de registro o productos y la cantidad de usuarios que actualmente estan registrados en la aplicación. En la parte privada se encuentra la interacción de los usuarios sea administrador, dueño de una casa o de una habitación, para controlar y observar sus datos.\\
+\end{frame}
 
-Las diversas interacciones que tiene cada usuario en el panel de control se garantizan por medio del framework, creando diferentes roles para cada tipo de usuario que se esta registrando y realizando la comprobación por parte de los controladores y el middleware que este provee.\\
+
+%Las diversas interacciones que tiene cada usuario en el panel de control se garantizan por medio del framework, creando diferentes roles para cada tipo de usuario que se esta registrando y realizando la comprobación por parte de los controladores y el middleware que este provee.\\
 
 %\begin{figure}[H]
 %\centering
@@ -40,7 +46,9 @@ Las diversas interacciones que tiene cada usuario en el panel de control se gara
 %\includegraphics[width=0.5\linewidth]{Imagenes/Index}
 %\end{figure}
 
-\subsection{Parte Pública}
+\begin{frame}
+
+\subsubsection{Parte Pública}
 
 En esta vista únicamente hay opciones para el contacto y solicitudes, como se menciona anteriormente, es sencilla debido a la poca información que contiene, según se observa en la figura \ref{fig:publicview}.
 
@@ -51,15 +59,15 @@ En esta vista únicamente hay opciones para el contacto y solicitudes, como se m
 %\includegraphics[width=0.5\linewidth]{Imagenes/Public_view}
 %\end{figure}
 
-\subsection{Parte Privada}
+\subsubsection{Parte Privada}
 
 En esta sección es donde se encuentra el Panel de Control para los diferentes usuarios de la aplicación. En primera instancia, un usuario administrador, el cual esta encargado de gestionar la aplicación, tiene la posibilidad de crear, ver, editar y eliminar los registros de la aplicación, la vista de este usuario se puede observar en la figura \ref{fig:views}\textbf{(a)}. Por medio de este se activan las cuentas de los demás, razón por la cual en la parte pública están las opciones de contacto y solicitud de registro.\\
 
-También existe el usuario dueño de la vivienda donde se encuentra el dispositivo, este es opcional y es para gestionar los dispositivos presentes dentro de un mismo domicilio, es un administrador de la casa, el cual puede revisar y editar algunos campos de sus usuarios hijos o usuarios habitación y sus diferentes casas y habitaciones registradas a su nombre, como se ve en la figura \ref{fig:views}\textbf{(b)}, de este modo el rol de dicho usuario es administrar su hogar y visualizar los datos de esta.\\
-
-Por último, otro rol es el de usuario habitación, el cuál únicamente visualiza sus propios datos, como la habitación y los dispositivos presentes en esta, según se observa en la figura \ref{fig:views}\textbf{(c)}, a este solo le compete la información de lo que posee en su cuarto, por tal motivo el panel de control muestra una vista general de los datos y el estado de sus dispositivos, además de tener la capacidad de editar partes básicas de su habitación y perfil. Dicho usuario puede o no estar sujeto a un usuario padre o usuario casa, ya que, solamente posee una tarjeta para su habitación y ninguna otra en dicha casa.\\
-
-Continuando con este usuario y la habitación modelo propuesta al inicio del capitulo, luego de que accede a la aplicación web e inicia sesión con los datos que ha registrado en el sistema, al ser un usuario de una habitación, este se encuentra con un panel de control como el de la figura \ref{fig:views}\textbf{(c)}, allí gestiona los dispositivos presentes en su habitación, así como también puede visualizar la temperatura que se ha sensado y encender o apagar los dispositivos conectados a la tarjeta.\\
+%También existe el usuario dueño de la vivienda donde se encuentra el dispositivo, este es opcional y es para gestionar los dispositivos presentes dentro de un mismo domicilio, es un administrador de la casa, el cual puede revisar y editar algunos campos de sus usuarios hijos o usuarios habitación y sus diferentes casas y habitaciones registradas a su nombre, como se ve en la figura \ref{fig:views}\textbf{(b)}, de este modo el rol de dicho usuario es administrar su hogar y visualizar los datos de esta.\\
+%
+%Por último, otro rol es el de usuario habitación, el cuál únicamente visualiza sus propios datos, como la habitación y los dispositivos presentes en esta, según se observa en la figura \ref{fig:views}\textbf{(c)}, a este solo le compete la información de lo que posee en su cuarto, por tal motivo el panel de control muestra una vista general de los datos y el estado de sus dispositivos, además de tener la capacidad de editar partes básicas de su habitación y perfil. Dicho usuario puede o no estar sujeto a un usuario padre o usuario casa, ya que, solamente posee una tarjeta para su habitación y ninguna otra en dicha casa.\\
+%
+%Continuando con este usuario y la habitación modelo propuesta al inicio del capitulo, luego de que accede a la aplicación web e inicia sesión con los datos que ha registrado en el sistema, al ser un usuario de una habitación, este se encuentra con un panel de control como el de la figura \ref{fig:views}\textbf{(c)}, allí gestiona los dispositivos presentes en su habitación, así como también puede visualizar la temperatura que se ha sensado y encender o apagar los dispositivos conectados a la tarjeta.\\
 
 %\begin{figure}[H]
 %	\centering
@@ -70,6 +78,10 @@ Continuando con este usuario y la habitación modelo propuesta al inicio del cap
 %	\subfigure[Usuario de Habitación]{\includegraphics[width=0.45\linewidth]{Imagenes/UserR_view}}
 %\end{figure}
 
+\end{frame}
+
+\begin{frame}
+
 Además de este panel de control, desde el cuál se realizan las operaciones sobre la aplicación, en la parte privada se encuentra la ruta encargada de la actualización Servidor-Tarjeta, es decir, en esta ruta es donde se intercambia la información. Allí se realiza una petición HTTP tipo GET por parte de la tarjeta, incluyendo en su contenido el id de la habitación en la que está instalada, jutno con el token correspondiente a esta, además en la URL se añade un texto tipo JSON en el cual se ubican todas los datos de la lectura actual de los sensores; esta petición la responde el servidor con un texto también tipo JSON que contiene la información pertinente de las cargas o actuadores como se observa la figura \ref{fig:updateview}, para dar seguridad a dicha transacción, se se utiliza el token mencionado anteriormente, el cual se verifica mediante el id de la habitación comparando el recibido con el almacenado.\\
 
 %\begin{figure}[H]
@@ -79,9 +91,12 @@ Además de este panel de control, desde el cuál se realizan las operaciones sob
 %	\includegraphics[width=0.7\linewidth]{Imagenes/Update_view}
 %\end{figure}
 
-De este modo, el usuario interactuando con la aplicación genera modificaciones en el texto con que responde el servidor a la petición de la tarjeta. Si el usuario desea encender el ventilador, como se observa en la figura \ref{fig:views}\textbf{(c)} esta presente un botón en la información del dispositivo, el cual con presionarlo lo enciende o apaga, esto es valido para cualquiera de los dos dispositivos, sea el ventilador o el bombillo led.\\
+\end{frame}
 
-Si el ventilador esta conectado a una salida de AC controlada, es posible que por medio del deslizador se le asigne un valor para que cambie su funcionamiento, del mismo modo ocurre con el bombillo led donde se refleja en su cambio de intensidad, pero este conectado a su respectiva salida DC controlada. Al generar estas interacciones el texto en formato JSON cambia de acuerdo con lo pedido por el usuario, modificando los campos de ``status'' y ``value'' en contraste con la acción realizada.\\ 
+\begin{frame}
+%De este modo, el usuario interactuando con la aplicación genera modificaciones en el texto con que responde el servidor a la petición de la tarjeta. Si el usuario desea encender el ventilador, como se observa en la figura \ref{fig:views}\textbf{(c)} esta presente un botón en la información del dispositivo, el cual con presionarlo lo enciende o apaga, esto es valido para cualquiera de los dos dispositivos, sea el ventilador o el bombillo led.\\
+%
+%Si el ventilador esta conectado a una salida de AC controlada, es posible que por medio del deslizador se le asigne un valor para que cambie su funcionamiento, del mismo modo ocurre con el bombillo led donde se refleja en su cambio de intensidad, pero este conectado a su respectiva salida DC controlada. Al generar estas interacciones el texto en formato JSON cambia de acuerdo con lo pedido por el usuario, modificando los campos de ``status'' y ``value'' en contraste con la acción realizada.\\ 
 
 Adicional a esto, si el usuario desea añadir, modificar o eliminar una regla, por ejemplo, quiere encender el bombillo led a una hora deseada, esto lo puede lograr mediante el botón de reglas en el panel de control, el cual lo redirige a la vista que se observa en la figura \ref{fig:rulesview}, en esta se indica una hora de inicio y finalización en la que el bombillo led enciende a la hora de inicio y se apaga a la hora de fin, si es la regla de apagado solo necesita una hora de inicio para apagarlo.\\
 
@@ -92,7 +107,10 @@ Adicional a esto, si el usuario desea añadir, modificar o eliminar una regla, p
 %	\includegraphics[width=0.6\linewidth]{Imagenes/rules_view}
 %\end{figure}
 
-\subsection{Base de Datos}
+\end{frame}
+
+\begin{frame}
+\subsubsection{Base de Datos}
 
 La estructura de la base de datos se puede observar en la figura \ref{fig:db}, aquí se observan los diferentes campos que posee cada tabla, además de las llaves y sus relaciones. Las relaciones presentes en esta estructura son de tipo 1:N, es decir, por ejemplo un usuario puede tener relacionadas N casas.\\
 
@@ -103,13 +121,17 @@ La estructura de la base de datos se puede observar en la figura \ref{fig:db}, a
 %\includegraphics[width=0.75\linewidth]{Imagenes/DB}
 %\end{figure}
 
-Esta sección donde se presentan todos los resultados en cuanto al software desarrollado presenta la mayoría de funciones implementadas en este, mostrando las diversas interfaces generadas en la aplicación, cumpliendo con los requisitos de permitir el monitoreo, control y la interacción del usuario con el dispositivo presente en su habitación, por medio de diferentes items que se han evidenciado en las figuras anteriores, permitiendo cambiar el estado de las salidas y asimismo visualizar los datos producidos por los sensores. También cabe resaltar que algunas salidas tienen la posibilidad de automatizarse a través de reglas, es decir, indicarle en que momento encender o apagar cierto dispositivo que se encuentre conectado a la tarjeta como se ha mencionado.\\
+%Esta sección donde se presentan todos los resultados en cuanto al software desarrollado presenta la mayoría de funciones implementadas en este, mostrando las diversas interfaces generadas en la aplicación, cumpliendo con los requisitos de permitir el monitoreo, control y la interacción del usuario con el dispositivo presente en su habitación, por medio de diferentes items que se han evidenciado en las figuras anteriores, permitiendo cambiar el estado de las salidas y asimismo visualizar los datos producidos por los sensores. También cabe resaltar que algunas salidas tienen la posibilidad de automatizarse a través de reglas, es decir, indicarle en que momento encender o apagar cierto dispositivo que se encuentre conectado a la tarjeta como se ha mencionado.\\
 
-Las funcionalidades para el cambio de estado en las salidas se realizan con cuidado, generando diálogos de confirmación con el fin de que el usuario este seguro de la acción que realiza. Para ejercer control sobre la energía entrega a las cargas, se cuenta con un deslizador o slider que permite cambiar el porcentaje de esta, asimismo es significativo resaltar que todos los datos generados de la interacción del cliente con el programa, se almacenan en la base de datos enlazada a dicha aplicación permitiendo una gestión adecuada de estos. Los resultados obtenidos del diseño de este software cumplen con el objetivo a partir del cual se construye y también se tienen algunas funciones adicionales como los usuarios administradores de casa, esto asegurando la escalabilidad de la aplicación. \\
+%Las funcionalidades para el cambio de estado en las salidas se realizan con cuidado, generando diálogos de confirmación con el fin de que el usuario este seguro de la acción que realiza. Para ejercer control sobre la energía entrega a las cargas, se cuenta con un deslizador o slider que permite cambiar el porcentaje de esta, asimismo es significativo resaltar que todos los datos generados de la interacción del cliente con el programa, se almacenan en la base de datos enlazada a dicha aplicación permitiendo una gestión adecuada de estos. Los resultados obtenidos del diseño de este software cumplen con el objetivo a partir del cual se construye y también se tienen algunas funciones adicionales como los usuarios administradores de casa, esto asegurando la escalabilidad de la aplicación. \\
+%
+%En cuanto a la protección de la aplicación se han mencionado los diferentes roles que se verifican por medio del middlware presente en esta solución, pero también cabe resaltar que con el objetivo de agregar seguridad a la transacción tarjeta-servidor se usa un token, el cual es único de cada habitación y se encuentra almacenado en la tarjeta y en el servidor, como se menciona anteriormente la aplicación al recibir la petición realiza esta verificación para proceder a contestar o simplemente ignorar la petición, de acuerdo con esto se esta ofreciendo un nivel de confiabilidad en dicha comunicación.\\
 
-En cuanto a la protección de la aplicación se han mencionado los diferentes roles que se verifican por medio del middlware presente en esta solución, pero también cabe resaltar que con el objetivo de agregar seguridad a la transacción tarjeta-servidor se usa un token, el cual es único de cada habitación y se encuentra almacenado en la tarjeta y en el servidor, como se menciona anteriormente la aplicación al recibir la petición realiza esta verificación para proceder a contestar o simplemente ignorar la petición, de acuerdo con esto se esta ofreciendo un nivel de confiabilidad en dicha comunicación.\\
+\end{frame}
 
-\section{Firmware}
+
+\subsection{Firmware}
+\begin{frame}
 
 Como se ha mencionado anteriormente, el firmware se encuentra compuesto de tareas, en la figura \ref{fig:tareas} se observa un bosquejo del trabajo de las diferentes tareas, tomando por función principal la encargada de gestionar la conexión a Wi-Fi y almacenar sus credenciales, dependiendo del estado de si estan almacenadas o no, el sistema se comporta de una u otra forma. Si se encuentran credenciales guardadas en la tarjeta, el sistema se trata de conectar, si la conexión es exitosa comienza el proceso de actualización de la hora del sistema y también de las diferentes ordenes de la aplicación web. En cambio, si no existen credenciales el dispositivo inicia un servidor web local para que el usuario pueda proporcionarle esta información como se menciona en la sección \ref{sub:wifi}.\\
 
@@ -121,10 +143,13 @@ En cada caso se crean tareas diferentes, para el suceso de no existir credencial
 %	\label{fig:tareas}
 %	\includegraphics[width=0.7\linewidth]{Imagenes/tareas}
 %\end{figure}
+\end{frame}
 
+\begin{frame}
 Además de esto, se mide el promedio del tiempo en que se demora la ejecución de la tarea en dos casos, cuando realiza la primera petición después de conectado a la red, es decir, cuánto se tarda realizando las peticiones necesarias, como obtener la hora y fecha de la red y realizar la petición a la aplicación web, obteniendo una duración media de aproximadamente de 2.7s, esta depende de la disponibilidad de los diferentes servidores en la web asimismo de la velocidad y el tráfico de la red, ya que la tarjeta espera hasta que obtiene dicha hora y luego continua con la petición HTTP también esperando que el servidor responda. El otro caso es el lapso que se demora la tarea en leer los datos de los sensores, enviar la petición HTTP al servidor, recibirlos y enviarlos a los diversor actuadores, este periodo es de 1s en promedio, para conocer el dato se tomaron un total de 3056 muestras.
+\end{frame}
 
-\subsection{Conexión a Internet vía Wi-Fi}\label{sub:wifi}
+\subsubsection{Conexión a Internet vía Wi-Fi}\label{sub:wifi}
 
 Los sistemas IoT deben estar conectados siempre a Internet, por tal motivo se debe brindar una forma para conectar al sistema a este, en base a esto, se desarrolla un servidor local en la tarjeta que facilitar este proceso, como se ha mencionado el módulo del ESP32 funciona como Punto de Acceso (AP) y como Cliente o Estación (STA) al mismo tiempo, aprovechando esta capacidad se usa el servidor local y se encuentra encargado de gestionar la conexión de la tarjeta vía Wi-Fi como se observa en la figura \ref{fig:conexion}.\\
 
@@ -148,7 +173,7 @@ De este modo, en la figura \ref{fig:wifi} están algunas paginas del servidor lo
 %		\label{fig:opt}}
 %\end{figure}
 
-\subsection{Escritura de Datos en la Aplicación Web}
+\subsubsection{Escritura de Datos en la Aplicación Web}
 
 Los datos que lee la tarjeta provienen de los diferentes sensores que tiene conectados según se ha mencionado, se usan diversos tipos, de estado para sensar la presencia, de calidad de aire entre otros presentes en esta. Para la escritura de los datos en el firmware se desarrollan varias tareas encargadas de leerlos y enviarlos a una tarea central. Los datos que están enviando contienen el id del dispositivo y la medida que lee en ese momento, estos se envían en forma de texto en formato JSON, de este modo, la tarea central los gestiona y envía a la aplicación con el mismo formato, organizandolos en la petición HTTP tipo GET que realiza, así la url que la tarjeta solicita, incluyendo el JSON de cada sensor, se observa en la figura \ref{fig:json}, de esta manera, en la url se encuentra el dominio del servidor, y la dirección que contiene el id y token de la habitación, por último se halla la información del sensor en formato JSON, que se compone por el id y el valor de este. La aplicación ya se encarga de almacenarlos y mostrarlos al usuario como se menciona anteriormente.
 
@@ -160,7 +185,7 @@ Los datos que lee la tarjeta provienen de los diferentes sensores que tiene cone
 %\end{figure}
 
 
-\subsection{Lectura de Datos de Internet}
+\subsubsection{Lectura de Datos de Internet}
 
 Para la configuración y comparación de las reglas que suministra el usuario a el dispositivo que desee controlar, es necesario contar con la hora actual y que se siga actualizando localmente gracias al RTC que posee internamente el ESP32, así, al inicio de la aplicación, se sincroniza y almacena la hora actual de la red, por medio del protocolo SNTP. Estas reglas actúan en cuanto a que encienda o apague un dispositivo en un instante dado, después de obtener este dato la ejecución programa continua con normalidad para realizar las diferentes peticiones a la aplicación web.\\
 
@@ -179,7 +204,7 @@ Analizando los tiempos de resolución de la petición http, siempre se tiene una
 
 Por los resultados expuestos, el programa esta realizando correctamente las funciones necesarias para el monitoreo y control del ambiente de instalación, es decir, se cumple con los alcances provistos y además aún existen recursos de procesamiento para agregar nuevas funcionalidades o mejorar el desempeño.
 
-\section{Hardware}
+\subsection{Hardware}
 
 De acuerdo con los circuitos diseñados en la sección \ref{sec:hw} donde se propone el desarrollo de hardware de la solución IoT, en la figura \ref{fig:tarjeta} se observan las diferentes tarjetas ya ensambladas en una caja eléctrica para probar el funcionamiento del prototipo. Las salidas y entradas están distribuidas según lo propuesto, para las salidas AC se usan toma corrientes para conectar allí los diversos dispositivos, para las salidas DC se utilizan conectores hembra tipo banana para facilitar la conexión de estos dispositivos.\\
 
@@ -225,7 +250,7 @@ En esta sección se evidencia tanto el hardware implementado, como su correcto f
 
 Se observa que el hardware quedo dividido en dos tarjetas, esto para facilitar la construcción y distribución de los diferentes elementos utilizados, si se usan componentes superficiales y se aumentan las capas de la tarjeta es posible reducir el tamaño y hasta integrarlas en una sola board. En la construcción de estas tarjetas se comprende diferentes funcionamientos en cuanto a los triac y los transistores mosfet, reforzando conocimientos que se habían adquirido.\\
 
-\section{Prueba Beta Cerrada}
+\subsection{Prueba Beta Cerrada}
 
 Para la prueba beta se escoge un grupo de personas, las cuales interactuan directamente con la aplicación web y el prototipo de la tarjeta SmartHouse, se detallan los diferentes items a evaluar mencionados anteriormente, como el ingreso a la aplicación, visualización de los datos almacenados en esta y el control de los dispositivos.\\
 

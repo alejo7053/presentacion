@@ -2,6 +2,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
 \usepackage{default}
+\usepackage{multicol}
 %\usetheme{Pittsburgh}
 %\usecolortheme{dove}
 %\useoutertheme{sidebar}
@@ -51,35 +52,38 @@
 	
 	\begin{frame}
 		\frametitle{Contenido}
-		\tableofcontents
+		\begin{multicols}{2}
+			\tableofcontents[hideallsubsections]
+		\end{multicols} 
 	\end{frame}
 	
 	
- 	\begin{frame}
+% 	\begin{frame}
 	 	\input{Introduccion}
-	 	hola
- 	\end{frame}
+%	\end{frame}
  
  	\begin{frame}
 		\input{Objetivos}
  	\end{frame}
  	
-	 	\input{MarcoTeorico}
+ 	\input{MarcoTeorico}
+ 	
+ 	\input{Desarrollo}
 
 	\input{Resultados_Analisis}
 
-	\begin{frame}
+%	\begin{frame}
 		\input{Conclusiones}
-	\end{frame}
+%	\end{frame}
 
-	\begin{frame}
+%	\begin{frame}
 		\input{Trabajos_Futuros}
-	\end{frame}
+%	\end{frame}
  
  %End Frame
  \setbeamertemplate{background canvas}{\includegraphics[width=\paperwidth,height=\paperheight]{Imagenes/final.jpg}}
  \begin{frame}
- 	
+ 	\textbf{FIN}
  \end{frame}
 
 
