@@ -1,20 +1,21 @@
 \section{Resultados y Análisis}
-\begin{frame}
+\begin{frame}[t]
 \frametitle{Resultados y Análisis}
 
 En este capítulo se describen ciertos pasos y funcionamientos de la solución en general, para esto se supone una habitación con un sensor de temperatura, un ventilador y un bombillo led, las cuales el usuario va a visualizar y gestionar desde la aplicación web. En la figura \ref{fig:iot} está el esquema del sistema IoT.
 
-%\begin{figure}[H]
-%	\centering
-%	\caption{Esquema Solución SmartHouse [Imagen Propia]}
-%	\label{fig:iot}
-%	\includegraphics[width=0.6\linewidth]{Imagenes/IOT}
-%\end{figure}
+\begin{figure}
+	\centering
+	\caption{Esquema Solución SmartHouse [Imagen Propia]}
+	\label{fig:iot}
+	\includegraphics[width=0.6\linewidth]{Imagenes/IOT}
+\end{figure}
 \end{frame}
 
-\begin{frame}
-
 \subsection{Software}
+\begin{frame}[t]
+\frametitle{Resultados y Análisis}
+\framesubtitle{Software}
 
 Se desarrolla la aplicación web de manera local y posteriormente se lanza a un servidor en Internet. Se encuentra compuesta por los siguientes sitios y las diferentes interacciones basadas en las funciones básicas crear, leer, actualizar y borrar (CRUD).
 
@@ -33,41 +34,51 @@ Se desarrolla la aplicación web de manera local y posteriormente se lanza a un 
 	\end{itemize}
 \end{itemize}
 
-De acuerdo con la lista anterior, se toman en cuenta dos partes, una pública y una privada, como se observa en la figura \ref{fig:index}. En la parte pública se encuentra una vista con la información de contacto del fabricante, solicitudes de registro o productos y la cantidad de usuarios que actualmente estan registrados en la aplicación. En la parte privada se encuentra la interacción de los usuarios sea administrador, dueño de una casa o de una habitación, para controlar y observar sus datos.\\
 \end{frame}
 
+\begin{frame}[t]
+\frametitle{Resultados y Análisis}
+\framesubtitle{Software}
+\footnotesize
+De acuerdo con la lista anterior, se toman en cuenta dos partes, una pública y una privada, como se observa en la figura \ref{fig:index}. En la parte pública se encuentra una vista con la información de contacto del fabricante, solicitudes de registro o productos y la cantidad de usuarios que actualmente estan registrados en la aplicación. En la parte privada se encuentra la interacción de los usuarios sea administrador, dueño de una casa o de una habitación, para controlar y observar sus datos.
 
-%Las diversas interacciones que tiene cada usuario en el panel de control se garantizan por medio del framework, creando diferentes roles para cada tipo de usuario que se esta registrando y realizando la comprobación por parte de los controladores y el middleware que este provee.\\
+\begin{figure}
+	\centering
+	\caption{Página de Inicio. [Imagen Propia]}
+	\label{fig:index}
+	\includegraphics[width=0.6\linewidth]{Imagenes/Index}
+\end{figure}
 
-%\begin{figure}[H]
-%\centering
-%\caption{Página de Inicio. [Imagen Propia]}
-%\label{fig:index}
-%\includegraphics[width=0.5\linewidth]{Imagenes/Index}
-%\end{figure}
-
-\begin{frame}
+\end{frame}
 
 \subsubsection{Parte Pública}
 
+\begin{frame}[t]
+\frametitle{Resultados y Análisis}
+\framesubtitle{Software}
+
+\textbf{Parte Pública: }
 En esta vista únicamente hay opciones para el contacto y solicitudes, como se menciona anteriormente, es sencilla debido a la poca información que contiene, según se observa en la figura \ref{fig:publicview}.
 
-%\begin{figure}[H]
-%\centering
-%\caption{Vista Pública. [Imagen Propia]}
-%\label{fig:publicview}
-%\includegraphics[width=0.5\linewidth]{Imagenes/Public_view}
-%\end{figure}
+\begin{figure}[H]
+\centering
+\caption{Vista Pública. [Imagen Propia]}
+\label{fig:publicview}
+\includegraphics[width=0.5\linewidth]{Imagenes/Public_view}
+\end{figure}
+
+\end{frame}
 
 \subsubsection{Parte Privada}
 
+\begin{frame}[t]
 En esta sección es donde se encuentra el Panel de Control para los diferentes usuarios de la aplicación. En primera instancia, un usuario administrador, el cual esta encargado de gestionar la aplicación, tiene la posibilidad de crear, ver, editar y eliminar los registros de la aplicación, la vista de este usuario se puede observar en la figura \ref{fig:views}\textbf{(a)}. Por medio de este se activan las cuentas de los demás, razón por la cual en la parte pública están las opciones de contacto y solicitud de registro.\\
 
-%También existe el usuario dueño de la vivienda donde se encuentra el dispositivo, este es opcional y es para gestionar los dispositivos presentes dentro de un mismo domicilio, es un administrador de la casa, el cual puede revisar y editar algunos campos de sus usuarios hijos o usuarios habitación y sus diferentes casas y habitaciones registradas a su nombre, como se ve en la figura \ref{fig:views}\textbf{(b)}, de este modo el rol de dicho usuario es administrar su hogar y visualizar los datos de esta.\\
-%
-%Por último, otro rol es el de usuario habitación, el cuál únicamente visualiza sus propios datos, como la habitación y los dispositivos presentes en esta, según se observa en la figura \ref{fig:views}\textbf{(c)}, a este solo le compete la información de lo que posee en su cuarto, por tal motivo el panel de control muestra una vista general de los datos y el estado de sus dispositivos, además de tener la capacidad de editar partes básicas de su habitación y perfil. Dicho usuario puede o no estar sujeto a un usuario padre o usuario casa, ya que, solamente posee una tarjeta para su habitación y ninguna otra en dicha casa.\\
-%
-%Continuando con este usuario y la habitación modelo propuesta al inicio del capitulo, luego de que accede a la aplicación web e inicia sesión con los datos que ha registrado en el sistema, al ser un usuario de una habitación, este se encuentra con un panel de control como el de la figura \ref{fig:views}\textbf{(c)}, allí gestiona los dispositivos presentes en su habitación, así como también puede visualizar la temperatura que se ha sensado y encender o apagar los dispositivos conectados a la tarjeta.\\
+También existe el usuario dueño de la vivienda donde se encuentra el dispositivo, este es opcional y es para gestionar los dispositivos presentes dentro de un mismo domicilio, es un administrador de la casa, el cual puede revisar y editar algunos campos de sus usuarios hijos o usuarios habitación y sus diferentes casas y habitaciones registradas a su nombre, como se ve en la figura \ref{fig:views}\textbf{(b)}, de este modo el rol de dicho usuario es administrar su hogar y visualizar los datos de esta.\\
+
+Por último, otro rol es el de usuario habitación, el cuál únicamente visualiza sus propios datos, como la habitación y los dispositivos presentes en esta, según se observa en la figura \ref{fig:views}\textbf{(c)}, a este solo le compete la información de lo que posee en su cuarto, por tal motivo el panel de control muestra una vista general de los datos y el estado de sus dispositivos, además de tener la capacidad de editar partes básicas de su habitación y perfil. Dicho usuario puede o no estar sujeto a un usuario padre o usuario casa, ya que, solamente posee una tarjeta para su habitación y ninguna otra en dicha casa.\\
+
+Continuando con este usuario y la habitación modelo propuesta al inicio del capitulo, luego de que accede a la aplicación web e inicia sesión con los datos que ha registrado en el sistema, al ser un usuario de una habitación, este se encuentra con un panel de control como el de la figura \ref{fig:views}\textbf{(c)}, allí gestiona los dispositivos presentes en su habitación, así como también puede visualizar la temperatura que se ha sensado y encender o apagar los dispositivos conectados a la tarjeta.\\
 
 %\begin{figure}[H]
 %	\centering

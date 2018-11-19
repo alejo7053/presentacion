@@ -3,8 +3,13 @@
 \usepackage[spanish]{babel}
 \usepackage{default}
 \usepackage{multicol}
+\usepackage{wrapfig}
+\usepackage{ragged2e}
+\justifying
 
 \setbeamercovered{transparent}
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{bibliography item}[text]
 
 %\textheight=31cm
 %\textwidth=10cm
@@ -13,7 +18,6 @@
 %\parindent=10mm
 \usetheme{Pittsburgh}
 \usecolortheme{dolphin}
-%\useoutertheme{sidebar}
 \useinnertheme{rectangles}
 
 \makeatletter
@@ -24,7 +28,7 @@
 	\advance\@tempdima by\beamer@leftmargin%
 	\advance\@tempdima by\beamer@rightmargin%
 	\pgfsetfillopacity{.7}       %<------ fix filling opacity
-	\begin{beamercolorbox}[sep=0.3cm,left,wd=\the\@tempdima]{frametitle}
+	\begin{beamercolorbox}[sep=0.4cm,left,wd=\the\@tempdima]{frametitle}
 		\usebeamerfont{frametitle}%
 		\vbox{}\vskip-1ex%
 		\if@tempswa\else\csname beamer@fteleft\endcsname\fi%
@@ -60,21 +64,16 @@
 	
 	\begin{frame}
 		\frametitle{Contenido}
-		\begin{multicols}{2}
 			\tableofcontents[hideallsubsections]
-		\end{multicols} 
 	\end{frame}
-	
-\begin{frame}
-	\begin{block}{Titulo}
-		Contenido
-	\end{block}
-\end{frame}
 
+%\begin{frame}
+%	\begin{block}{Titulo}
+%		Contenido
+%	\end{block}
+%\end{frame}
 
-% 	\begin{frame}
 	 	\input{Introduccion}
-%	\end{frame}
  
  	\begin{frame}
 		\input{Objetivos}
@@ -86,18 +85,20 @@
 
 	\input{Resultados_Analisis}
 
-%	\begin{frame}
-		\input{Conclusiones}
-%	\end{frame}
+	\input{Conclusiones}
 
-%	\begin{frame}
-		\input{Trabajos_Futuros}
-%	\end{frame}
+	\input{Trabajos_Futuros}
+ 
+\begin{frame}[allowframebreaks]
+\frametitle{Bibliografía}
+	\bibliographystyle{unsrt}
+	\bibliography{BibliMSc}
+\end{frame}
  
  %End Frame
  \setbeamertemplate{background canvas}{\includegraphics[width=\paperwidth,height=\paperheight]{Imagenes/final.jpg}}
  \begin{frame}
- 	\textbf{FIN}
+
  \end{frame}
 
 
